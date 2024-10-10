@@ -14,8 +14,8 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 def decrypt_file(input, output_file_path, key):
     # with open(input_file_path, 'rb') as f:
         # salt = f.read(16)
-    iv = input[16:32]
-    ciphertext = input[32:]
+    iv = input[:16]
+    ciphertext = input[16:]
 
         # ciphertext = f.read()
 
